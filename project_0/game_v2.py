@@ -48,5 +48,8 @@ def score_game(random_predict) -> int:
 
 score_game(random_predict)
 
+print('hello')
+
+
 
 
