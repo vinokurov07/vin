@@ -1,15 +1,22 @@
-def func(a,b) -> int:
-    """_summary_
+"""Игра угадай число"""
 
-    Args:
-        int (_type_): _description_
+import numpy as np
 
-    Returns:
-        int: _description_
-    """
+number = np.random.randint(1, 101) # загадываем число
 
-    print(f'это {a*b}')
-    return a*b
+# количество попыток
+count = 0
 
-func(5,10)
+while True:
+    count+=1
+    predict_number = int(input("Угадай число от 1 до 100: "))
+    
+    if predict_number > number:
+        print("Число должно быть меньше!")
 
+    elif predict_number < number:
+        print("Число должно быть больше!")
+    
+    else:
+        print(f"Вы угадали число! Это число = {number}, за {count} попыток")
+        break #конец игры выход из цикла
