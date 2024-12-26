@@ -1,4 +1,4 @@
 # Hello, dear guests
 
 ## Projects
-* [Project 0. Игра: "Угадай число"] (C:\Users\Lario\OneDrive\Рабочий стол\Data Sсientist\IDE\project_0)
+* [Project 0. Игра: "Угадай число"] (https://github.com/vinokurov07/vin/tree/main/project_0)
