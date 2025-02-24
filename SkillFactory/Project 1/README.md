@@ -27,8 +27,11 @@ https://drive.google.com/file/d/1XaCXlTUlpaDIYS5iQICKKF10bTtMm7wg/view?usp=drive
 ### Этапы работы над проектом  
 
 3.1 Исследование структуры данных
+
 3.2 Преобразование данных
+
 3.3 Исследование зависимостей в данных
+
 3.4 Очистка данных
 
 :arrow_up:[к оглавлению](README.md#Оглавление)
@@ -40,6 +43,7 @@ https://drive.google.com/file/d/1XaCXlTUlpaDIYS5iQICKKF10bTtMm7wg/view?usp=drive
 Диаграммы, используемые в проекте, создавались с помощью Plotly и могут не открываться в GitHub. 
 Для возможности простмотра они записаны в формат html и сохранены в папке Plotly. 
 Ссылка на папку: https://github.com/vinokurov07/vin/tree/main/SkillFactory/Project%201/Plotly
+
 Нумерация диаграмм соответствует номеру заданий.
 
 :arrow_up:[к оглавлению](README.md#Оглавление)
