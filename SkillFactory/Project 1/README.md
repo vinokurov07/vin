@@ -18,6 +18,8 @@
 ### Краткая информация о данных
 
 База резюме выгруженна с сайта поиска вакансий hh.ru.
+Исходная база данных находится по ссылке:
+https://drive.google.com/file/d/1XaCXlTUlpaDIYS5iQICKKF10bTtMm7wg/view?usp=drive_link
   
 :arrow_up:[к оглавлению](README.md#Оглавление)
 
@@ -33,12 +35,11 @@
 
 
 ### Результаты
-
-Очищенная база данных находится по ссылке:
-https://drive.google.com/drive/folders/1-bRWaCOERp7jg6SGCGsq_lrwYz4dLLP5
+Весь проект выполнен в шаблоне-ноутбуке (https://github.com/vinokurov07/vin/blob/main/SkillFactory/Project%201/Project-1._%D0%9D%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD.ipynb)
 
 Диаграммы, используемые в проекте, создавались с помощью Plotly и могут не открываться в GitHub. 
 Для возможности простмотра они записаны в формат html и сохранены в папке Plotly. 
+Ссылка на папку: https://github.com/vinokurov07/vin/tree/main/SkillFactory/Project%201/Plotly
 Нумерация диаграмм соответствует номеру заданий.
 
 :arrow_up:[к оглавлению](README.md#Оглавление)
