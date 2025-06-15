@@ -1,0 +1,18 @@
+INFO: 2025-05-18 15:33:29,672: Data
+INFO: 2025-05-18 15:33:41,923: Data shape (110527, 14)
+INFO: 2025-05-18 15:33:49,785: Percentage of women: 0.653882342398853
+INFO: 2025-05-18 15:34:58,641: Percentage of women: 0.653882342398853
+INFO: 2025-05-18 15:35:07,087: Percentage of men: 0.346117657601147
+INFO: 2025-05-18 15:35:13,783: Percentage of men: 0.346117657601147
+ERROR: 2025-05-18 15:37:51,084: Data shape is incorrect!
+INFO: 2025-05-20 09:37:24,573: Data
+INFO: 2025-05-20 09:37:24,592: Data shape (110527, 14)
+INFO: 2025-05-20 09:37:24,641: Percentage of women: 0.653882342398853
+INFO: 2025-05-20 09:37:24,672: Percentage of men: 0.346117657601147
+ERROR: 2025-05-20 09:37:24,736: Data shape is incorrect!
+WARNING: 2025-05-20 10:22:43,517: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.comet.com', port=443): Read timed out. (read timeout=10)")': /clientlib/status-report/update
+WARNING: 2025-05-20 10:22:54,625: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000022BA17FFD90>: Failed to resolve 'www.comet.com' ([Errno 11001] getaddrinfo failed)")': /clientlib/rest/v2/write/experiment/output
+WARNING: 2025-05-20 10:22:58,625: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000022BA1C16D50>: Failed to resolve 'www.comet.com' ([Errno 11001] getaddrinfo failed)")': /clientlib/status-report/update
+WARNING: 2025-05-20 10:40:11,840: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.comet.com', port=443): Read timed out. (read timeout=10)")': /clientlib/status-report/update
+WARNING: 2025-05-20 10:40:31,961: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='www.comet.com', port=443): Read timed out. (read timeout=10)")': /clientlib/status-report/update
+WARNING: 2025-05-20 10:40:40,006: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000022BA17FFD90>: Failed to resolve 'www.comet.com' ([Errno 11001] getaddrinfo failed)")': /clientlib/status-report/update
