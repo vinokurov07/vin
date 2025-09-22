@@ -37,7 +37,7 @@
 
 
 ### Результаты
-Весь проект выполнен в шаблоне-ноутбуке (https://github.com/vinokurov07/vin/blob/main/SkillFactory/Project%202/Project_2_%D0%9D%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA_%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD.ipynb)
+Весь проект выполнен в ноутбуке: [Ноутбук](<Projects/Project 2/Project_2_Ноутбук_шаблон.ipynb>)
 
 
 :arrow_up:[к оглавлению](README.md#Оглавление)
