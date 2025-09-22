@@ -73,7 +73,7 @@ lng — географическая долгота отеля.
 
 
 ### Результаты
-Весь проект выполнен в ноутбуке (https://github.com/vinokurov07/vin/blob/main/SkillFactory/PROJECT-3.%20EDA%20%2B%20Feature%20Engineering.%20%D0%A1%D0%BE%D1%80%D0%B5%D0%B2%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%B0%20Kaggle/Project%203.Hotels%20reviews.ipynb)
+[Весь проект выполнен в ноутбуке](</Projects/PROJECT-3. EDA + Feature Engineering. Соревнование на Kaggle/Project 3.Hotels reviews.ipynb>)
 
 
 :arrow_up:[к оглавлению](README.md#Оглавление)
