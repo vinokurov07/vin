@@ -1,3 +1,10 @@
 Projects/Project 2/.env
 SkillFactory/
 requirements
+# Игнорировать большие файлы данных
+*.csv
+*.zip
+*.tar
+*.gz
+**/data/
+**/dataset/
