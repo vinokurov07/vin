@@ -38,11 +38,11 @@ https://drive.google.com/file/d/1XaCXlTUlpaDIYS5iQICKKF10bTtMm7wg/view?usp=drive
 
 
 ### Результаты
-[Весь проект выполнен в шаблоне-ноутбуке](<Projects/Project 1/Project-1._Ноутбук-шаблон.ipynb>)
+[Весь проект выполнен в шаблоне-ноутбуке](</Projects/Project 1/Project-1._Ноутбук-шаблон.ipynb>)
 
 Диаграммы, используемые в проекте, создавались с помощью Plotly и могут не открываться в GitHub. 
 Для возможности простмотра они записаны в формат html и сохранены в папке Plotly. 
-[Ссылка на папку:](<Projects/Project 1/Plotly>)
+[Ссылка на папку:](</Projects/Project 1/Plotly>)
 
 Нумерация диаграмм соответствует номеру заданий.
 
