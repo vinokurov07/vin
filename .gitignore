@@ -2,6 +2,7 @@ Projects/Project 2/.env
 SkillFactory/
 requirements
 Выгрузка ГРС Шакша/
+IDE.code-workspace
 # Игнорировать большие файлы данных
 *.csv
 *.zip
