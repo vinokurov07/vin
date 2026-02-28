@@ -4,7 +4,7 @@ requirements
 Выгрузка ГРС Шакша/
 IDE.code-workspace
 # Игнорировать большие файлы данных
-*.csv
+#*.csv
 *.zip
 *.tar
 *.gz
