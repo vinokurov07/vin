@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s   # как часто собирать метрики
+
+scrape_configs:
+  # Задача для сбора метрик с нашего модельного сервера
+  - job_name: 'wine_model'
+    static_configs:
+      - targets: ['host.docker.internal:8000']   # хост-машина с точки зрения контейнера
