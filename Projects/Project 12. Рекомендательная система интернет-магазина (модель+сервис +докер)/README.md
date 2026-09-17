@@ -753,9 +753,6 @@ scrape_configs:
 git clone https://github.com/vinokurov07/vin.git
 cd "vin/Projects/Project 12. Рекомендательная система интернет-магазина (модель+сервис +докер)"
 ```
-> Проект находится внутри монорепозитория `vin`. Все дальнейшие команды выполняются из папки проекта.
-```
-
 ### 2. Скачать данные
 
 См. [scripts/download_data.md](scripts/download_data.md).
