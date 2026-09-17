@@ -1,0 +1,43 @@
+# Данные
+data/
+*.csv
+!tests/*.csv
+
+# Артефакты модели
+models/
+*.cbm
+*.pkl
+*.parquet
+*.joblib
+
+# Docker
+*.tar
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Jupyter
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Архивы
+*.zip
+*.7z
+*.rar
+
+# Кеши инструментов
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Секреты
+.env
+*.env

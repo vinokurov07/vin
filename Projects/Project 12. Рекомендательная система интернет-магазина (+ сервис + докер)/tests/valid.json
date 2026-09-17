@@ -1,0 +1,8 @@
+{
+  "visitorid": 12345,
+  "candidates": [
+    {"itemid": 101, "categoryid": 5, "hour": 20, "dayofweek": 4, "day_period": "Evening", "is_weekend": 0, "session_event_num": 1, "time_since_session_start": 0.0},
+    {"itemid": 202, "categoryid": 7, "hour": 20, "dayofweek": 4, "day_period": "Evening", "is_weekend": 0, "session_event_num": 1, "time_since_session_start": 0.0},
+    {"itemid": 303, "categoryid": 3, "hour": 20, "dayofweek": 4, "day_period": "Evening", "is_weekend": 0, "session_event_num": 1, "time_since_session_start": 0.0}
+  ]
+}
