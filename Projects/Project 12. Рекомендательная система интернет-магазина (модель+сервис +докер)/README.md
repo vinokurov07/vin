@@ -42,22 +42,31 @@
 
 ### 2. Загрузить и запустить
 
-\```bash
-docker load -i recommender.tar
+\```bash  
+docker load -i recommender.tar  
 docker run -d -p 8000:8000 --name recommender recommender:1.0.0
 \```
 
 ### 3. Проверить
 
-\```bash
-curl http://localhost:8000/health
-##### {"status": "ok"}
+**Linux / macOS / Git Bash:**
 
-curl -X POST http://localhost:8000/recommend \
-  -H "Content-Type: application/json" \
-  --data-binary "@tests/valid.json"
-##### {"recommendations": [101, 303, 202], "model_version": "1.0.0"}
-\```
+```bash
+curl http://localhost:8000/health
+# {"status": "ok"}
+
+curl -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/valid.json"
+# {"recommendations": [101, 303, 202], "model_version": "1.0.0"}
+```
+запускать curl из папки проекта (там, где лежит tests/valid.json). Иначе путь @tests/valid.json не найдётся.
+
+**Windows PowerShell:**
+
+```powershell
+curl.exe http://localhost:8000/health
+
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/valid.json"
+```
 
 Подробности по API — в разделе [API сервиса](#api-сервиса).
 
@@ -513,6 +522,8 @@ curl -X POST http://localhost:8000/recommend \
 
 Базовый URL: `http://localhost:8000`
 
+> **Про `curl` на разных ОС.** В примерах ниже два блока: для Linux/macOS и для Windows. На Windows обязательно используйте `curl.exe`, а не `curl` — в PowerShell `curl` это алиас на `Invoke-WebRequest`, который не поддерживает флаги `-X`, `-H`, `--data-binary`. Для простых GET-запросов разницы нет, но для POST — только `curl.exe`.
+
 ### POST /recommend
 
 Возвращает топ-3 рекомендации для пользователя.
@@ -565,7 +576,9 @@ curl -X POST http://localhost:8000/recommend \
 
 `recommendations` — список `itemid` в порядке убывания вероятности покупки. Длина списка = `min(3, len(candidates))`.
 
-### Пример запроса через `curl`
+**Пример запроса:**
+
+Linux / macOS / Git Bash:
 
 ```bash
 curl -X POST http://localhost:8000/recommend \
@@ -573,12 +586,26 @@ curl -X POST http://localhost:8000/recommend \
   --data-binary "@tests/valid.json"
 ```
 
+Windows PowerShell (одной строкой — так надёжнее):
+
+```powershell
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/valid.json"
+```
+
 ### GET /health
 
-Проверка работоспособности сервиса. Используется Docker/Kubernetes для проверки живости.
+Проверка работоспособности. Используется Docker/Kubernetes для проверки живости контейнера.
+
+**Linux / macOS:**
 
 ```bash
 curl http://localhost:8000/health
+```
+
+**Windows PowerShell:**
+
+```powershell
+curl.exe http://localhost:8000/health
 ```
 
 **Ответ:**
@@ -589,10 +616,18 @@ curl http://localhost:8000/health
 
 ### GET /metrics
 
-Метрики в формате Prometheus. Используется для мониторинга (подключение Prometheus, Grafana).
+Метрики в формате Prometheus. Используется для мониторинга (Prometheus + Grafana).
+
+**Linux / macOS:**
 
 ```bash
 curl http://localhost:8000/metrics
+```
+
+**Windows PowerShell:**
+
+```powershell
+curl.exe http://localhost:8000/metrics
 ```
 
 ### Обработка ошибок
@@ -609,7 +644,9 @@ curl http://localhost:8000/metrics
 | `{ невалидный JSON` | `{"error": "Request body must be valid JSON"}` | 400 |
 | >1000 кандидатов | `{"error": "'candidates' must not exceed 1000 items"}` | 400 |
 
-**Примеры для проверки** лежат в папке `tests/`:
+### Примеры для проверки
+
+В папке `tests/` лежат готовые JSON-файлы:
 
 | Файл | Что проверяет |
 |------|---------------|
@@ -621,7 +658,7 @@ curl http://localhost:8000/metrics
 | `tests/no_itemid.json` | Кандидат без `itemid` |
 | `tests/invalid.json` | Невалидный JSON |
 
-**Запуск всех проверок:**
+**Запуск всех проверок (Linux / macOS):**
 
 ```bash
 curl -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/empty.json"
@@ -630,6 +667,17 @@ curl -X POST http://localhost:8000/recommend -H "Content-Type: application/json"
 curl -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/not_object.json"
 curl -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/no_itemid.json"
 curl -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/invalid.json"
+```
+
+**Запуск всех проверок (Windows PowerShell):**
+
+```powershell
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/empty.json"
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/not_list.json"
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/empty_list.json"
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/not_object.json"
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/no_itemid.json"
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/invalid.json"
 ```
 
 ---
