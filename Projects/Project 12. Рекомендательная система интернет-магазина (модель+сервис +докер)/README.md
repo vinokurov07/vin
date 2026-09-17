@@ -581,12 +581,10 @@ curl -X POST http://localhost:8000/recommend \
 Linux / macOS / Git Bash:
 
 ```bash
-curl -X POST http://localhost:8000/recommend \
-  -H "Content-Type: application/json" \
-  --data-binary "@tests/valid.json"
+curl -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/valid.json"
 ```
 
-Windows PowerShell (одной строкой — так надёжнее):
+Windows PowerShell:
 
 ```powershell
 curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/valid.json"
