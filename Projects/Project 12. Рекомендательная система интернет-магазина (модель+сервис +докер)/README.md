@@ -38,7 +38,7 @@
 
 ### 1. Скачать образ
 
-Образ доступен в [Releases](https://github.com/vinokurov07/vin/releases/tag/v1.0.0-project12).
+Образ доступен в [Releases](https://github.com/vinokurov07/vin/releases/download/v1.0.0-project12/recommender.tar).
 
 ### 2. Загрузить и запустить
 
@@ -747,11 +747,15 @@ scrape_configs:
 
 ## Как воспроизвести проект
 
+> Проект находится внутри монорепозитория [vin](https://github.com/vinokurov07/vin) в папке `Projects/Project 12. Рекомендательная система интернет-магазина (модель+сервис +докер)`. Все команды выполняются из этой папки.
+
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone https://github.com/<user>/recommender-system.git
-cd recommender-system
+git clone https://github.com/vinokurov07/vin.git
+cd "vin/Projects/Project 12. Рекомендательная система интернет-магазина (модель+сервис +докер)"
+```
+> Проект находится внутри монорепозитория `vin`. Все дальнейшие команды выполняются из папки проекта.
 ```
 
 ### 2. Скачать данные
@@ -761,8 +765,15 @@ cd recommender-system
 
 ### 3. Обучить модель
 
-Открыть `notebooks/recommender_pipeline.ipynb`, выполнить все ячейки.
-На выходе — `models/catboost_final.cbm` и `data/item_popularity.parquet`.
+Открыть `notebooks/Рекомендательная система интернет-магазина.ipynb`, выполнить все ячейки.
+
+На выходе — в `models/` появятся:
+- `catboost_final.cbm` — обученная модель
+- `feature_columns.json` — порядок признаков
+- `cat_features.json` — категориальные признаки
+
+И в `data/`:
+- `item_popularity.parquet` — snapshot популярности для retrieval.
 
 ### 4. Запустить сервис локально
 
@@ -770,6 +781,8 @@ cd recommender-system
 pip install -r requirements.txt
 python -m app.main
 ```
+Сервис будет доступен на `http://localhost:8000` (dev-режим Flask).
+В продакшене используется `gunicorn` — так же, как в Docker.
 
 ### 5. Собрать Docker-образ
 
@@ -780,6 +793,8 @@ docker run -d -p 8000:8000 --name recommender recommender:1.0.0
 
 ### 6. Проверить API
 
+**Linux / macOS / Git Bash:**
+
 ```bash
 curl http://localhost:8000/health
 curl -X POST http://localhost:8000/recommend \
@@ -787,9 +802,16 @@ curl -X POST http://localhost:8000/recommend \
   --data-binary "@tests/valid.json"
 ```
 
+**Windows PowerShell:**
+
+```powershell
+curl.exe http://localhost:8000/health
+curl.exe -X POST http://localhost:8000/recommend -H "Content-Type: application/json" --data-binary "@tests/valid.json"
+```
+
 ### Готовый Docker-образ
 
-Если не хочется обучать модель заново — скачать готовый образ из [Releases](https://github.com/vinokurov07/vin/releases/tag/v1.0.0-project12):
+Если не хочется обучать модель заново — скачать готовый образ из [Releases](https://github.com/vinokurov07/vin/releases/download/v1.0.0-project12/recommender.tar):
 
 ```bash
 docker load -i recommender.tar
